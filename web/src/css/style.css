@@ -1,0 +1,384 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    outline:none;
+}
+
+
+.codeFont{
+    font-family: source-code-pro, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+
+html, body{
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+}
+
+body{
+    color:#DDD;
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+
+.welcomeMsg{
+    color: #069;
+    font-size: 3em;
+}
+
+
+.mainWrap{
+    height: 100%;
+    min-height: 100%;
+}
+
+.fullCover{
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+
+.verticalMiddle{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.title{
+    color: #888;
+    font-size: xx-large;
+    margin-bottom: .4em;
+}
+
+.title:before{
+    content: '::';
+    color: #069;
+}
+
+.loginMerlinText{
+    color: #555;
+    font-family: source-code-pro, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    font-size: 5em;
+}
+
+.loginMerlinText:before{
+    content: '::';
+    color: #069;
+}
+
+
+.errorList{
+    color: #069;
+    text-align: center;
+    font-size: x-large;
+    text-shadow: #181818 2px 2px 1px;
+}
+
+.center{ text-align: center; }
+.left{ text-align: left; }
+.right{ text-align: right; }
+.inlineBlock{ display: inline-block; }
+
+input{
+    background-color: #181818;
+    border: 0.12em solid #555;
+    color: #DDD;
+    -moz-border-radius:0.4em;
+    border-radius:0.4em;
+    padding: 0.1em 0.4em 0.1em 0.4em;
+    font-size: large;
+}
+
+input:focus{
+    border: 0.12em solid #069;
+}
+
+input[type="submit"]{
+    color: #555;
+}
+
+
+input[type="submit"]:focus{
+    color: #069;
+}
+
+
+::-webkit-input-placeholder {
+    color:    #555;
+}
+:-moz-placeholder {
+    color:    #555;
+    opacity:  1;
+}
+::-moz-placeholder {
+    color:    #555;
+    opacity:  1;
+}
+:-ms-input-placeholder {
+    color:    #555;
+}
+
+
+
+.relative{
+    position: relative;
+}
+
+nav{
+    text-align: center;
+    margin: 0 0 1em 0;
+    background-color: rgba(0,0,0,0.3);
+    vertical-align: middle;
+    padding: 0.7em 0;
+
+}
+
+nav > svg{
+    vertical-align: middle;
+}
+
+nav > ul{
+    display:inline-block;
+    position:relative;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    vertical-align: middle;
+}
+
+nav > ul > li{
+    display:inline-block;
+    margin:0;
+    vertical-align:middle;
+    text-align:center;
+}
+
+
+
+nav > ul > li > a{
+    position:relative;
+    padding:0 0.25em 0px 0.25em;
+    font-size:xx-large;
+    font-weight:700;
+    text-shadow:1px 1px 1px #111;
+
+    -o-transition:color .5s, text-shadow .5s;
+    -ms-transition:color .5s, text-shadow .5s;
+    -moz-transition:color .5s, text-shadow .5s;
+    -webkit-transition:color .5s, text-shadow .5s;
+    transition:color .5s, text-shadow .5s;
+
+}
+
+
+nav > ul > li > a:hover{
+    color:#069;
+    text-shadow:1px 1px 1px #111;
+}
+
+
+nav > ul > li > a:active{
+    left:1px;
+    top:1px;
+}
+
+a{
+    color:#777;
+    text-shadow:1px 1px 0px #171717;
+    text-decoration:none;
+    -o-transition:color .5s, text-shadow .5s;
+    -ms-transition:color .5s, text-shadow .5s;
+    -moz-transition:color .5s, text-shadow .5s;
+    -webkit-transition:color .5s, text-shadow .5s;
+    transition:color .5s, text-shadow .5s;
+}
+
+a:hover{
+    color:#069;
+    text-shadow:1px 1px 1px #111;
+}
+
+.instanceList{
+    font-size: x-large;
+    color: #069;
+}
+
+
+.destroy_btn{
+    color: #600;
+}
+
+
+.destroy_btn a{
+    color: #444;
+}
+
+.destroy_btn a:hover{
+    color: #600;
+}
+
+.cmdIcon, .cmdIconPop{
+    position: relative;
+    display: inline-block;
+    width: 1.8em;
+    height: 1.5em;
+    background-color: #161616;
+    box-shadow: #000 1px 1px 2px;
+    cursor: pointer;
+    margin: 0 0.25em;
+    text-align: center;
+}
+.cmdIcon{
+    -moz-border-radius:0 0.2em 0.2em 0.2em;
+    border-radius:0 0.2em 0.2em 0.2em;
+}
+
+.cmdIconPop{
+    -moz-border-radius:0.2em;
+    border-radius:0.2em;
+}
+
+
+.cmdIcon:before{
+    display: block;
+    position: absolute;
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color: #0A0A0A;
+    top:-0.2em;
+    left:0;
+    -moz-border-radius:0.15em;
+    border-radius:0.15em;
+    z-index: -1;
+}
+
+.cmdIcon:after, .cmdIconPop:after{
+    position: absolute;
+    color: #888;
+    content: '>_';
+    top:0;
+    left:0.4em;
+    font-size: medium;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
+}
+
+
+
+
+.cmdIcon:hover:after, .cmdIconPop:hover:after{
+    color: #069;
+}
+
+.clientTerminal{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    max-height: 100%;
+}
+
+.terminal{
+    position: relative;
+    display: table-row;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    overflow-y:scroll;
+    white-space: pre;
+}
+
+.terminal .output, .terminal .command{
+    display: block;
+    margin: 0.5em;
+    font-family: source-code-pro, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+.terminal .command{
+    margin-bottom: 0;
+    font-size: large;
+}
+
+.terminal .command:before{
+    content: '> ';
+    color: #069;
+    font-size: large;
+    font-weight: bold;
+}
+
+.terminal .output{
+    margin-top: 0;
+}
+
+.consolePrompt{
+    position: relative;
+    display: table-row;
+    vertical-align:middle;
+
+}
+
+.cpgt, .cpinput{
+    display: table-cell;
+    position: relative;
+    vertical-align:middle;
+}
+.cpgt{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0.25em 0 0.4em;
+    color: #006699;
+}
+
+.cpinput{
+    width:100%;
+    padding: 0.5em 0;
+}
+
+
+
+.cpinput input{
+    border: none;
+    font-size: large;
+    text-align: left;
+    background: transparent;
+    color: #DDD;
+    -moz-border-radius:0;
+    border-radius:0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cpinput input:focus{
+    border: none;
+}
+
+.table{
+    display: table;
+}
+
+.accent{
+    color: #006699;
+}
+
+.logs{
+    position: relative;
+    word-break: break-all;
+    white-space: pre-wrap;
+}

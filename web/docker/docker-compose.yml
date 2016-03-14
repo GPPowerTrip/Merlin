@@ -1,0 +1,29 @@
+arthur:
+  image: pmdcosta/arthur
+  environment:
+    - URL=http://gp.powertrip.pt/build/artifacts/
+    - JAR=arthur.jar
+    - RPORT=6379
+    - RHOST=redis
+  links:
+    - redis
+
+knight:
+  image: pmdcosta/knight
+  environment:
+    - URL=http://gp.powertrip.pt/build/artifacts/
+    - JAR=knight.jar
+    - UPDATE=10000
+    - AHOST=arthur
+    - APORT=8080
+  links:
+    - arthur
+
+#client:
+#  image: pmdcosta/client
+#  links:
+#    - arthur
+
+redis:
+  image: redis
+
